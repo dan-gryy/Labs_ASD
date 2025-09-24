@@ -23,7 +23,7 @@ int main(void)
             printf("function is not defined for this x\n");
         }
     }
-    else if (x < -10)
+    else if (x <= -10)
     {
         printf("y = %i\n", y2);
     }
