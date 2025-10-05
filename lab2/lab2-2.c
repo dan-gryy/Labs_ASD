@@ -7,17 +7,14 @@ int main(void)
     printf("Type n: ");
     scanf("%d", &n);
     double P = 1.0;
+    double S = 0.0;
     int function = 0;
 
     for (int i = 1; i <= n; i++)
     {
-        double S = 0.0;
-        for (int j = 1; j <= i; j++)
-        {
-            S += j * sin(j) + j;
-            function += 3;
-        }
-        P *= (i * sqrt(i) / S);
+        S += i * sin(i) + i;
+        function += 3;
+        P *= i * sqrt(i) / S;
         function += 3;
     }
 
