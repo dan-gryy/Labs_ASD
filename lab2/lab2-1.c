@@ -19,11 +19,11 @@ int main()
         for (int j = 1; j <= i; j++)
         {
             b += j * sin(j) + j;
-            count += 4;
+            count += 3;
         }
         {
             P *= a / b;
-            count += 3;
+            count += 2;
         }
     }
 

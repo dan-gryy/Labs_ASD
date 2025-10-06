@@ -19,6 +19,6 @@ int main(void)
     }
 
     printf("%.7lf\n", P);
-    printf("Number of functions: %d\n", function);
+    printf("Number of functions: %d\n", function); 
     return 0;
 }
