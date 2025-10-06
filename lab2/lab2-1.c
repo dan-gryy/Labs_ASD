@@ -8,6 +8,7 @@ int main()
     scanf("%d", &n);
 
     double P = 1.0;
+    double b = 0.0;
 
     for (int i = 1; i <= n; i++)
     {
@@ -18,13 +19,11 @@ int main()
         for (int j = 1; j <= i; j++)
         {
             b += j * sin(j) + j;
-            count += 3;
+            count += 4;
         }
-
-        if (b != 0)
         {
             P *= a / b;
-            count += 2;
+            count += 3;
         }
     }
 
