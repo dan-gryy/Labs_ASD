@@ -47,11 +47,11 @@ int main()
         int col = search(A[i], n, x);
         if (col != -1)
         {
-            printf("Found X at row %d, column %d\n", i, col);
+            printf("Found X at row %d, column %d\n", i + 1, col + 1);
         }
         else
         {
-            printf("X not found in row %d\n", i);
+            printf("X not found in row %d\n", i + 1);
         }
     }
     return 0;
