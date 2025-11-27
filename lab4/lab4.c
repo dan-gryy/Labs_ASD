@@ -6,25 +6,24 @@ int search(double row[], int n, double x)
     while (L < R)
     {
         int M = (L + R) / 2;
-        if (row[M] <= x)
-        {
-            L = M + 1;
-        }
-        else
+
+        if (row[M] >= x)
         {
             R = M;
         }
+        else
+        {
+            L = M + 1;
+        }
     }
-    if (L > 0 && row[L - 1] == x)
-    {
-        return L - 1;
-    }
-    return -1;
+    if (row[L] == x)
+        return L;
+    else
+        return -1;
 }
 int main()
 {
     int m, n;
-    double x;
     printf("Enter number of rows (m): ");
     scanf("%d", &m);
     printf("Enter number of columns (n): ");
@@ -39,20 +38,18 @@ int main()
             scanf("%lf", &A[i][j]);
         }
     }
-    printf("Enter the value X to search for: ");
+    double x;
+    printf("Enter value X to search for: ");
     scanf("%lf", &x);
     printf("Search results:\n");
     for (int i = 0; i < m; i++)
     {
         int col = search(A[i], n, x);
+
         if (col != -1)
-        {
-            printf("Found X at row %d, column %d\n", i + 1, col + 1);
-        }
+            printf("Found X in row %d, column %d\n", i + 1, col + 1);
         else
-        {
             printf("X not found in row %d\n", i + 1);
-        }
     }
     return 0;
 }
